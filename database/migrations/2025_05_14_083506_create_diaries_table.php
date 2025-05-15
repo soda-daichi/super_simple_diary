@@ -13,9 +13,9 @@ class CreateDiariesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Diaries', function (Blueprint $table) {
+        Schema::create('diaries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->String('title',128);
+            $table->string('title',128);
             $table->text('contents');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateDiariesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Diaries');
+        Schema::dropIfExists('diaries');
     }
 }
