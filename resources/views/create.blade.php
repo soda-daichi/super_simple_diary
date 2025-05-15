@@ -47,6 +47,11 @@
                     <textarea class="label" id="contents" type="text" name="contents" placeholder="内容を入力" rows="5" cols="80"></textarea>
                 </label>
             </div>
+            @if($errors->any())
+              @foreach ($errors->all() as $error)
+                {{ $error }}
+              @endforeach
+            @endif
 
             <input type="submit" name="submit" value="投稿する" />
         </form>
