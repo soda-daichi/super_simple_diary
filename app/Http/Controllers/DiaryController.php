@@ -19,10 +19,7 @@ class DiaryController extends Controller
 
         if (empty($title)) {
             $now = Carbon::now();
-            // 現在日時を××××-××-×× ○○:○○:○○に変換
             $title = $now->format('Y-m-d H:i:s');
-            // 2021-10-19 23:29:52
-            //  = Carbon::now()->format('Y-m-d'); // 現在の日付をYYYY-MM-DDの形式で取得
         }
 
         $request->validate([
