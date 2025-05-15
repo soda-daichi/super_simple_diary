@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'showdiariesController@show');
 
 Route::get('/create', 'DiaryController@create');
 
