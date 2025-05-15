@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/create', 'DiaryController@create');
+
+Route::post('/add', 'DiaryController@add');
