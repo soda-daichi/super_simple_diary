@@ -16,7 +16,6 @@ class showDiariesController extends Controller
     public function destroy(int $id){
         $diary = Diary::find($id);
         $diary->delete();
-        session()->flash('success', '日記を削除しました！');
         return redirect('/');
     }
 }
