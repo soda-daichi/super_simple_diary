@@ -37,13 +37,13 @@
 
             <div>
                 <label  for="title">
-                    <input class="label" id="title" type="text" name="title" placeholder="日記のタイトルを入力" />
+                    <input class="label" id="title" type="text" name="title" value = "{{$diary->title}}" placeholder="日記のタイトルを入力" />
                 </label>
             </div>
 
             <div>
                 <label  for="contents">
-                    <textarea class="label" id="contents" type="text" name="contents" placeholder="内容を入力" rows="5" cols="80"></textarea>
+                    <textarea class="label" id="contents" type="text" name="contents" placeholder="内容を入力" rows="5" cols="80" >{{$diary->contents}}</textarea>
                 </label>
             </div>
             @if($errors->any())
