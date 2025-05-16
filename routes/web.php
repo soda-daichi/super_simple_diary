@@ -18,3 +18,7 @@ Route::get('/create', 'DiaryController@create');
 Route::post('/add', 'DiaryController@add');
 
 Route::delete('/{id}', 'showDiariesController@destroy');
+
+Route::get('/{id}/edit', 'showDiariesController@edit');
+
+Route::post('/{id}', 'showDiariesController@update');
