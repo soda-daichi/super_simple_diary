@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Diary;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
+
 
 class showDiariesController extends Controller
 {
@@ -17,6 +19,7 @@ class showDiariesController extends Controller
     public function destroy(int $id){
         $diary = Diary::find($id);
         $diary->delete();
+        Storage::append('sample.txt', $diary);
         return redirect('/');
     }
 
