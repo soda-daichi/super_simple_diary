@@ -47,7 +47,7 @@
             <p>本文：{{ $diary->contents }}</p>
             <p>{{ $diary->created_at}}</p>
             <div class="button">
-                <a href="{{ url('/diaries/' . $diary->id . '/edit') }}">編集</a>
+                <a href="{{ url('/' . $diary->id . '/edit') }}">編集</a>
             </div>
 
             <form action="{{ url('/' . $diary->id) }}" method="post">
