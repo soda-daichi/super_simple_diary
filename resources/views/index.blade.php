@@ -48,9 +48,9 @@
             <p>{{ $diary->created_at}}</p>
             <div class="button">
                 <a href="{{ url('/diaries/' . $diary->id . '/edit') }}">編集</a>
-                <form action="{{ url('/diaries/' . $diary->id) }}" method="post"></form>
             </div>
 
+            <form action="{{ url('/' . $diary->id) }}" method="post">
             @csrf
             @method('DELETE')
             <input type="submit" value="削除">
