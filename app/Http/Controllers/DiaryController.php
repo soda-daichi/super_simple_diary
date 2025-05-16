@@ -34,5 +34,6 @@ class DiaryController extends Controller
         $diary->save();
         return redirect('/'); //とりあえずトップページに戻る。
     }
+    
 }
 

@@ -18,4 +18,5 @@ class showDiariesController extends Controller
         $diary->delete();
         return redirect('/');
     }
+    
 }
