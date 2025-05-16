@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class showdiariesController extends Controller
+class showDiariesController extends Controller
 {
     public function show(Request $request) {
          $diaries = DB::table('diaries')->get();
