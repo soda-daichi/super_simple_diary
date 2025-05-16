@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Diary;
 use Carbon\Carbon;
+
 class showDiariesController extends Controller
 {
     public function show(Request $request) {
@@ -18,6 +19,7 @@ class showDiariesController extends Controller
         $diary->delete();
         return redirect('/');
     }
+
      public function edit(int $id){
         $diary = Diary::find($id);
         
@@ -45,4 +47,5 @@ class showDiariesController extends Controller
         return redirect('/'); //とりあえずトップページに戻る。
         
     }
+
 }
