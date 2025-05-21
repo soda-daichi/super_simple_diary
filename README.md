@@ -12,6 +12,16 @@
 
 Laravelプロジェクトを本番運用・公開サーバーで利用する場合は、
 必ずWebサーバーのdocumentroot（公開ディレクトリ）をプロジェクトの `public` ディレクトリに設定してください。
+Webサーバーを起動する。
+## Laragonを使用している場合は、以下の手順をする。
+laragon\etc\nginx\sites-enabledのファイルのlocationを以下の文に変更する。
+
+ location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+
+その後Webサーバーを再起動する。
 
 【理由】
 - `public` より上層のディレクトリを公開すると、環境ファイル（.env）やアプリの内部コードが外部から見えてしまう危険性があります。
